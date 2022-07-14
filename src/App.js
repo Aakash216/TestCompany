@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar";
+import UserCards from "./userCard";
+import "./style.css";
+import Footer from "./footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <div className="container">
+          <Navbar />
+          <div style={{ display: "flex" }}>
+            <h5 className="h5">Suggested Candidate</h5>
+            <button
+              type="button"
+              className="rounded-pill button"
+              style={{
+                backgroundColor: "#e56717",
+                width: "180px",
+                border: "none",
+                height: "40px",
+                marginLeft: "220px",
+                color: "white",
+              }}
+            >
+              Post a job >
+            </button>
+          </div>
+          <UserCards />
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
 
